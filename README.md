@@ -1,1 +1,1 @@
-up and running with json server
+displaying a single post, in the details page.
