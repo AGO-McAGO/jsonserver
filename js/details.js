@@ -1,10 +1,11 @@
 "use strict";
 
-const postId = new URLSearchParams(window.location.search).get("id"); // create a new uri params searched object and get the "id".
+
+const postId = new URLSearchParams(window.location.search).get("id");
 const postDetails = document.querySelector(".details");
 
 const renderDetails = async () => {
-  const response = await fetch("http://localhost:3000/posts/" + postId); // endpoint to get a single post.
+  const response = await fetch("http://localhost:3000/posts/" + postId);
   const posts = await response.json();
 
   // template for single post.
@@ -13,7 +14,7 @@ const renderDetails = async () => {
     <p>${posts.body}</p>
   `;
   
-  postDetails.innerHTML = detailsTemplate; // display it on the page.
+  postDetails.innerHTML = detailsTemplate;
 
 };
 
