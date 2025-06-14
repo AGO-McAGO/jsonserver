@@ -13,21 +13,17 @@
 <body>
 
   <nav>
-    <h1> Create A New Post </h1>
     <a href="index.html"> Back to homepage </a>
+    <a href="#" onclick="history.back()"> Back to post </a>
   </nav>
   
+  <h1> Update Post </h1>
+  
   <section>
-    <form>
-
-      <input type="text" name="title" required placeholder="Post title">
-      <textarea name="body" required placeholder="Post body"></textarea>
-      <button> Create </button>
-      
-    </form>
+    <form> <div  class="updateform"></div> <input type="submit" name="submit" value="Update" class="updatepost" required /> </form>
   </section>
 
-  <script src="js/create.js"></script>
+  <script src="js/edit.js"></script>
 
 </body>
 </html>

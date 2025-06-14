@@ -38,6 +38,8 @@ textarea {
   min-height:200px;
 }
 
+button { cursor: pointer; }
+
 /* post list */
 .post {
   padding: 16px;
