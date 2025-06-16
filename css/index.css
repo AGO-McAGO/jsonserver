@@ -56,3 +56,11 @@ button { cursor: pointer; }
 .post a {
   color: #36cca2;
 }
+
+.deletebtn {
+  background-color: #ea0a0a;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 0;
+}

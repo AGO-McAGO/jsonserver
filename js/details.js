@@ -3,7 +3,9 @@
 
 const postId = new URLSearchParams(window.location.search).get("id");
 const postDetails = document.querySelector(".details");
+const postDelete = document.querySelector(".deletebtn");
 
+//! Display single post
 const renderDetails = async () => {
   try {
     const response = await fetch(`http://localhost:3000/posts/${postId}`);
@@ -15,7 +17,6 @@ const renderDetails = async () => {
       <p>${posts.body}</p>
       <nav>
         <a href="/edit.html?id=${posts.id}"> Update </a>
-        <a href="#"> Delete </a>
       </nav>
     `;
   
@@ -26,5 +27,15 @@ const renderDetails = async () => {
   }
 
 };
+
+//! Delete post
+postDelete.addEventListener( "click", async () => {
+  const response = await fetch(`http://localhost:3000/posts/${postId}`, {
+    method: "DELETE"
+  } );
+  
+  window.location.replace("/");
+
+} );
 
 window.addEventListener("DOMContentLoaded", () => renderDetails() );
